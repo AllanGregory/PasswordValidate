@@ -43,8 +43,6 @@ namespace PasswordValidate
 
             app.UseAuthorization();
 
-            app.UseExceptionHandler("/error");
-
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
