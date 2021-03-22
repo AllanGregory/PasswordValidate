@@ -1,5 +1,6 @@
 # PasswordValidate
 
+
 ## Como executar o projeto?
 
 - Baixar o código fonte para a máquina local
@@ -9,6 +10,7 @@
     dotnet run
     ```
   - No Visual Studio apertar F5 ou clicar em Run do IIS Express
+  - 
 
 ## Para testar o projeto em execução
 
@@ -32,6 +34,7 @@ O nome do parâmetro deverá ser "InputPassword".
 
 O retorno dessa requisição será **true** ou **false**.
 
+
 ## Solução
 
 A solução foi pensada de forma que apenas 2 camadas seriam necessárias na arquitetura.
@@ -43,6 +46,16 @@ A camada Controller para recepção das requisições e a camada Business para t
 As validações funcionam com booleanos, onde retorno false para o primeiro indício de que a senha digitada foge das regras estipuladas, sem necessidade de correr todos os caracteres que recebo na requisição.
 
 Cada validação possui sua classe e as configurações de tamanho da senha e caracteres especiais foram colocados no arquivo appsettings.json, permitindo que isso possa ser alterado a qualquer momento e não fique hardcoded dentro da aplicação.
+
+### Testes
+
+O projeto de testes foi criado com a ferramenta XUnit.net.
+
+Cada classe de teste unitário neste projeto foi refletida para cada classe da camada Business, contemplando um teste de sucesso e um teste de falha.
+
+Para a classe que gerencia as chamadas de cada validação também foi criada um teste unitário, onde a falha processa mais de uma requisição por teste, para que todos os cenários sejam validados.
+
+O projeto está aberto para implementação de _testes de integração_, pois estes não foram desenvolvidos.
 
 ### Exceções
 
