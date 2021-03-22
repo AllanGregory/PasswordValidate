@@ -4,13 +4,14 @@
 ## Como executar o projeto?
 
 - Baixar o código fonte para a máquina local
+- Abrir o local da pasta onde contém a solution (extensão .sln) no Visual Studio 2019 ou no VS Code
 - Utilizar o VS Code ou o Visual Studio 2019 (v.16.8+)
   - No VSCode executar o comando:
     ```
     dotnet run
     ```
   - No Visual Studio apertar F5 ou clicar em Run do IIS Express
-  - 
+
 
 ## Para testar o projeto em execução
 
