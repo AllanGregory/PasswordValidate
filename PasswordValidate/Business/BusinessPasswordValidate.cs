@@ -31,14 +31,13 @@ namespace PasswordValidate.Business
             {
                 Password password = JsonConvert.DeserializeObject<Password>(pPassword.ToString());
 
-                if (!validateLength.HasCorrectLength(password.InputPassword)) return false;
-                if (validateBlank.HasBlankSpace(password.InputPassword)) return false;
-                if (!validateLength.HasCorrectLength(password.InputPassword)) return false;
-                if (!validateDigit.HasDigit(password.InputPassword)) return false;
-                if (!validateLower.HasLower(password.InputPassword)) return false;
-                if (!validateUpper.HasUpper(password.InputPassword)) return false;
-                if (!validateSpecialChar.HasSpecialChar(password.InputPassword)) return false;
-                if (validateRepeated.HasRepeated(password.InputPassword)) return false;
+                if (!validateLength.HasCorrectLength(password.InputPassword)) return false; //Length
+                if (validateBlank.HasBlankSpace(password.InputPassword)) return false; //Blank Space
+                if (!validateDigit.HasDigit(password.InputPassword)) return false; //Digit
+                if (!validateLower.HasLower(password.InputPassword)) return false; //Lower
+                if (!validateUpper.HasUpper(password.InputPassword)) return false; //Upper
+                if (!validateSpecialChar.HasSpecialChar(password.InputPassword)) return false; //Special Char
+                if (validateRepeated.HasRepeated(password.InputPassword)) return false; //Repeated
             }
             catch(Exception ex)
             {
